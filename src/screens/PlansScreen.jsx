@@ -130,8 +130,8 @@ const PlansScreen = ({ setScreen, setSelectedPlan }) => {
                             className="bg-[#1C1C1E] rounded-[24px] p-5 mb-5 border border-white/5"
                         >
                             <View className="flex-row justify-between items-start mb-4">
-                                <View className="flex-row items-center gap-3">
-                                    <View className={`w-12 h-12 rounded-2xl items-center justify-center ${plan.type === 'workout' ? 'bg-teal-500/10' : 'bg-orange-500/10'
+                                <View className="flex-row items-center gap-3 flex-1 mr-3">
+                                    <View className={`w-12 h-12 rounded-2xl items-center justify-center flex-shrink-0 ${plan.type === 'workout' ? 'bg-teal-500/10' : 'bg-orange-500/10'
                                         }`}>
                                         <Icon
                                             name={plan.type === 'workout' ? 'Dumbbell' : 'Heart'}
@@ -139,8 +139,8 @@ const PlansScreen = ({ setScreen, setSelectedPlan }) => {
                                             color={plan.type === 'workout' ? '#14B8A6' : '#F97316'}
                                         />
                                     </View>
-                                    <View>
-                                        <Text className="text-white font-bold text-lg" numberOfLines={1}>
+                                    <View className="flex-1">
+                                        <Text className="text-white font-bold text-lg" numberOfLines={1} ellipsizeMode="tail">
                                             {plan.planName || 'Custom Plan'}
                                         </Text>
                                         <Text className="text-slate-500 text-xs font-medium uppercase tracking-widest mt-0.5">
@@ -149,7 +149,7 @@ const PlansScreen = ({ setScreen, setSelectedPlan }) => {
                                     </View>
                                 </View>
                                 {plan.status === 'active' && (
-                                    <View className="bg-emerald-500/90 px-3 py-1 rounded-full">
+                                    <View className="bg-emerald-500/90 px-3 py-1 rounded-full flex-shrink-0">
                                         <Text className="text-white text-[10px] font-black uppercase">Active</Text>
                                     </View>
                                 )}

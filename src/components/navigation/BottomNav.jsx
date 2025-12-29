@@ -1,11 +1,9 @@
 import React from 'react';
-import { View, TouchableOpacity, Text, Platform, Dimensions } from 'react-native';
+import { View, TouchableOpacity, Text, Platform } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
 import Icon from '../ui/Icon';
 import { playUIClick } from '../../services/voice.service';
-
-const { width } = Dimensions.get('window');
 
 const BottomNav = ({ active = 'home', setScreen }) => {
     const insets = useSafeAreaInsets();
@@ -47,8 +45,7 @@ const BottomNav = ({ active = 'home', setScreen }) => {
                         return (
                             <View
                                 key={id}
-                                className="relative items-center justify-end h-full"
-                                style={{ width: width / 5 }}
+                                className="flex-1 relative items-center justify-end h-full"
                             >
                                 <TouchableOpacity
                                     onPress={() => handlePress(id)}
@@ -86,8 +83,7 @@ const BottomNav = ({ active = 'home', setScreen }) => {
                             key={id}
                             onPress={() => handlePress(id)}
                             activeOpacity={0.7}
-                            className="items-center justify-center py-1"
-                            style={{ width: width / 5 }}
+                            className="flex-1 items-center justify-center py-1"
                         >
                             <View className="items-center justify-center h-7 mb-1.5">
                                 <Icon
