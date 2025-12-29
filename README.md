@@ -16,7 +16,8 @@ FitZone is a high-performance React Native (Expo) application designed to bridge
 
 ### 🎙️ Immersive Voice Coaching
 - **Aura Voice Integration**: Powered by **Deepgram TTS** to provide real-time motivational cues and countdowns during workouts.
-- **Dynamic Soundscapes**: Professional audio feedback for countdowns, completions, and UI interactions.
+- **Interactive Audio**: Real-time voice feedback and professional sound effects triggered on button presses and UI interactions.
+- **Dynamic Soundscapes**: Professional audio feedback for countdowns, completions, and navigation.
 
 ---
 
@@ -57,6 +58,8 @@ FitZone is a high-performance React Native (Expo) application designed to bridge
 
 3. **Launch**
    ```bash
+   npm start
+   # or
    npx expo start
    ```
 
