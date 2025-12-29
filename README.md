@@ -4,6 +4,10 @@ FitZone is a high-performance React Native (Expo) application designed to bridge
 
 ## 📱 Core Features
 
+### 🏃 Real-Time Activity Tracking
+- **Smart Pedometer**: Uses device motion sensors to track steps and activity ring progress in real-time.
+- **Dynamic Progress**: Visual activity rings that update instantly as you move.
+
 ### 🤖 Intelligent AI Trainer (FitBot)
 - **Personalized Planning**: Generates 7-day workout and diet plans using the **OpenRouter (mimo-v2-flash)** model.
 - **Smart Recommendations**: Analyzes user goals (fat loss, muscle gain) to recommend specific high-intensity interval training (HIIT) or strength sessions.
@@ -64,4 +68,4 @@ FitZone is a high-performance React Native (Expo) application designed to bridge
    ```
 
 ## 👨‍💻 Author
-Developed by **AmateurMind** for professional internship evaluation. Focused on clean code, security best practices, and innovative AI integration.
+Developed by **AmateurMind** for professional internship evaluation. Focused on clean code, real-time sensor integration (Pedometer), and innovative AI.
