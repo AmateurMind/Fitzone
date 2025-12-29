@@ -1,12 +1,5 @@
 # FitZone - React Native Fitness App
 
-> ## 🔑 API Credentials (IMPORTANT - DO NOT SHARE PUBLICLY)
-> | Service | Account | API Key | Credit Remaining |
-> |---------|---------|---------|------------------|
-> | **Deepgram** (TTS) | suhail17mohammad@gmail.com | `a3e2e9a0ce2c9d1ab9feaf94484bba3163b196d2` | $200 |
->
-> ⚠️ **Note:** Move these to a `.env` file before pushing to public repositories!
-
 A comprehensive fitness application built with React Native (Expo), featuring workout tracking, gym finder, class bookings, and AI-powered recommendations.
 
 ## 🚀 Features

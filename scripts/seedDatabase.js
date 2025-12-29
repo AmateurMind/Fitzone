@@ -8,13 +8,13 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, doc, setDoc, addDoc, serverTimestamp, Timestamp } from 'firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDFj1DSRrPRIsDOEk9uSnaakbQnwTGrD10",
-    authDomain: "task1-cb8c8.firebaseapp.com",
-    projectId: "task1-cb8c8",
-    storageBucket: "task1-cb8c8.firebasestorage.app",
-    messagingSenderId: "763518939788",
-    appId: "1:763518939788:web:5a78204c1ee2b3f51ac1a9",
-    measurementId: "G-4L1YFZESHQ"
+    apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
+    authDomain: process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.EXPO_PUBLIC_FIREBASE_APP_ID,
+    measurementId: process.env.EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);
@@ -216,15 +216,15 @@ const generateClasses = (gymId) => {
     const classTypes = ['Yoga', 'HIIT', 'Zumba', 'Pilates', 'Strength Training'];
     const trainers = ['Priya S.', 'Amit V.', 'Neha S.', 'Kavya M.', 'Rahul V.'];
     const times = ['6:00 AM', '8:00 AM', '10:00 AM', '6:00 PM', '8:00 PM'];
-    
+
     const classes = [];
     const today = new Date();
-    
+
     for (let i = 0; i < 7; i++) {
         const date = new Date(today);
         date.setDate(today.getDate() + i);
         const dateStr = date.toISOString().split('T')[0];
-        
+
         classTypes.forEach((type, idx) => {
             classes.push({
                 name: `${type} Class`,
@@ -237,7 +237,7 @@ const generateClasses = (gymId) => {
             });
         });
     }
-    
+
     return classes;
 };
 
@@ -269,7 +269,7 @@ const seedDatabase = async () => {
             });
             gymIds.push(gymRef.id);
             console.log(`  ✓ Added: ${gym.name}`);
-            
+
             // Seed classes for each gym
             const classes = generateClasses(gymRef.id);
             for (const classData of classes) {
@@ -297,7 +297,7 @@ const seedDatabase = async () => {
             const tomorrow = new Date();
             tomorrow.setDate(tomorrow.getDate() + 1);
             const tomorrowStr = tomorrow.toISOString().split('T')[0];
-            
+
             await addDoc(collection(db, 'bookings'), {
                 userId: userId,
                 gymId: gymIds[0],
@@ -317,7 +317,7 @@ const seedDatabase = async () => {
         for (let i = 0; i < 5; i++) {
             const checkinDate = new Date();
             checkinDate.setDate(checkinDate.getDate() - i);
-            
+
             await addDoc(collection(db, 'checkins'), {
                 userId: userId,
                 gymId: gymIds[0],

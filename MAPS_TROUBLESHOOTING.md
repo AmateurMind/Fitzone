@@ -36,7 +36,7 @@ Open browser console (F12) and look for:
 
 ## Current Configuration
 
-- **API Key**: `AIzaSyDqDx99GsT5-KQ2EqVaZTqpwVGEJZf8Qjw`
+- **API Key**: `YOUR_GOOGLE_MAPS_API_KEY` (set in app.json)
 - **Center**: Viman Nagar, Pune (18.5679, 73.9144)
 - **Gyms**: Should show 6 locations around Pune
 
