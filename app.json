@@ -1,0 +1,36 @@
+{
+    "expo": {
+        "name": "FitZone",
+        "slug": "fitzone",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "userInterfaceStyle": "dark",
+        "assetBundlePatterns": [
+            "**/*"
+        ],
+        "ios": {
+            "supportsTablet": true,
+            "infoPlist": {
+                "NSMotionUsageDescription": "This app uses your motion data to track your steps and activity ring progress."
+            },
+            "config": {
+                "googleMapsApiKey": "AIzaSyDqDx99GsT5-KQ2EqVaZTqpwVGEJZf8Qjw"
+            }
+        },
+        "android": {
+            "package": "com.company.fitzone",
+            "permissions": [
+                "android.permission.ACTIVITY_RECOGNITION"
+            ],
+            "config": {
+                "googleMaps": {
+                    "apiKey": "AIzaSyDqDx99GsT5-KQ2EqVaZTqpwVGEJZf8Qjw"
+                }
+            }
+        },
+        "web": {
+            "bundler": "metro",
+            "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        }
+    }
+}

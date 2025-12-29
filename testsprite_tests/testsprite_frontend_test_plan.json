@@ -1,0 +1,473 @@
+[
+  {
+    "id": "TC001",
+    "title": "Home Screen Load and Render",
+    "description": "Verify that the Home Screen loads and renders correctly on iOS, Android, and Web platforms within 3 seconds including user stats, quick actions, featured workouts, and AI recommendations.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Launch the app on iOS platform and navigate to Home Screen"
+      },
+      {
+        "type": "assertion",
+        "description": "Home Screen elements including user stats, quick actions, featured workouts, and AI workout recommendation card are visible and loaded within 3 seconds"
+      },
+      {
+        "type": "action",
+        "description": "Repeat the above steps on Android device"
+      },
+      {
+        "type": "assertion",
+        "description": "Home Screen elements render correctly and within 3 seconds on Android"
+      },
+      {
+        "type": "action",
+        "description": "Open the Web app version and navigate to Home Screen"
+      },
+      {
+        "type": "assertion",
+        "description": "Home Screen elements render without errors and load within 3 seconds on Web"
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "Workouts Screen Search and Filtering",
+    "description": "Confirm that workouts can be searched and filtered by category, difficulty, and duration with real-time updates of displayed results.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Workouts Screen"
+      },
+      {
+        "type": "action",
+        "description": "Enter a search keyword for workouts"
+      },
+      {
+        "type": "assertion",
+        "description": "Displayed workouts list updates to match search query in real-time"
+      },
+      {
+        "type": "action",
+        "description": "Apply filter by workout category (e.g., strength)"
+      },
+      {
+        "type": "assertion",
+        "description": "Workouts list updates showing only workouts of selected category"
+      },
+      {
+        "type": "action",
+        "description": "Apply filter by difficulty (e.g., intermediate)"
+      },
+      {
+        "type": "assertion",
+        "description": "Only workouts matching difficulty filter appear in the list"
+      },
+      {
+        "type": "action",
+        "description": "Apply filter by duration (e.g., 30-45 mins)"
+      },
+      {
+        "type": "assertion",
+        "description": "Workouts displayed meet duration criteria"
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Workout Detail Screen Display and Start Workout",
+    "description": "Validate that the Workout Detail Screen correctly displays exercises, instructions, and enables starting a workout session.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Select a workout from the Workouts Screen"
+      },
+      {
+        "type": "assertion",
+        "description": "Workout Detail Screen shows all exercises and instructions clearly"
+      },
+      {
+        "type": "action",
+        "description": "Click the 'Start Workout' button"
+      },
+      {
+        "type": "assertion",
+        "description": "Workout session initiates and displays tracking interface without errors"
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "Gyms Screen Search and Filter",
+    "description": "Ensure that users can search and filter gyms by location, amenities, and class availability and results update in real-time.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open Gyms Screen"
+      },
+      {
+        "type": "action",
+        "description": "Enter a search term related to gyms (e.g., 'CrossFit')"
+      },
+      {
+        "type": "assertion",
+        "description": "Gym list updates to show gyms matching search term"
+      },
+      {
+        "type": "action",
+        "description": "Apply filters for amenities (e.g., pool, sauna)"
+      },
+      {
+        "type": "assertion",
+        "description": "Gyms displayed include selected amenities"
+      },
+      {
+        "type": "action",
+        "description": "Apply class schedule availability filter"
+      },
+      {
+        "type": "assertion",
+        "description": "Only gyms with classes available as per filter are shown"
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "Gym Map Screen Location Display and Interaction",
+    "description": "Verify that the Gym Map Screen displays accurate gym locations with clickable markers and centers on Viman Nagar effectively.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Gym Map Screen"
+      },
+      {
+        "type": "assertion",
+        "description": "Google Maps renders centered on Viman Nagar with all gyms marked"
+      },
+      {
+        "type": "action",
+        "description": "Click several gym markers on the map sequentially"
+      },
+      {
+        "type": "assertion",
+        "description": "Gym detail snippets appear correctly and without delay"
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Gym Detail Screen Functionality and Booking",
+    "description": "Ensure that the Gym Detail Screen presents comprehensive information including amenities and class schedules, and allows users to book classes.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Select a gym from Gym List or Map"
+      },
+      {
+        "type": "assertion",
+        "description": "Gym Detail Screen loads with amenities, class schedules, and booking options visible"
+      },
+      {
+        "type": "action",
+        "description": "Attempt to book a class from the schedule"
+      },
+      {
+        "type": "assertion",
+        "description": "Booking is successful and confirmation is shown"
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "AI Chat Screen Real-time Fitness Consultation",
+    "description": "Confirm the AI Chat interface correctly sends fitness questions, receives responses within 5 seconds, and maintains conversation history.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open AI Chat Screen"
+      },
+      {
+        "type": "action",
+        "description": "Send a fitness question to the AI"
+      },
+      {
+        "type": "assertion",
+        "description": "AI responds with relevant fitness advice within 5 seconds"
+      },
+      {
+        "type": "action",
+        "description": "Send multiple follow-up questions"
+      },
+      {
+        "type": "assertion",
+        "description": "Conversation history is preserved and displayed correctly"
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "AI Workout Recommendation Card Relevance and Performance",
+    "description": "Validate that AI-powered workout recommendations load within 3 seconds and present workouts personalized to the user's profile information.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Home Screen"
+      },
+      {
+        "type": "assertion",
+        "description": "AI Workout Recommendation Card loads within 3 seconds"
+      },
+      {
+        "type": "assertion",
+        "description": "Workout recommendations reflect user's fitness goals and levels"
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "QR Code Scanner Check-in Functionality",
+    "description": "Verify that the QR Code Scanner works with live camera feed, accurately scans gym QR codes, logs check-ins in Firestore, and shows confirmation messages.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open QR Code Scanner Screen and grant camera permission"
+      },
+      {
+        "type": "assertion",
+        "description": "Camera feed displays correctly and scanner is active"
+      },
+      {
+        "type": "action",
+        "description": "Scan a valid gym QR code"
+      },
+      {
+        "type": "assertion",
+        "description": "Check-in is logged in Firestore and confirmation message appears"
+      },
+      {
+        "type": "action",
+        "description": "Scan an invalid or incorrect QR code"
+      },
+      {
+        "type": "assertion",
+        "description": "Appropriate error message is displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "User Profile Screen Data Display and Settings Management",
+    "description": "Ensure the User Profile Screen correctly displays user statistics, subscription status, and allows updates to settings and logout functionality.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to User Profile Screen"
+      },
+      {
+        "type": "assertion",
+        "description": "User stats, subscription info, and settings options are displayed correctly"
+      },
+      {
+        "type": "action",
+        "description": "Modify a user setting (e.g., notification preferences)"
+      },
+      {
+        "type": "assertion",
+        "description": "Changes save successfully and reflect immediately in the UI"
+      },
+      {
+        "type": "action",
+        "description": "Click logout button"
+      },
+      {
+        "type": "assertion",
+        "description": "User is logged out and redirected to login screen"
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "Real-time Data Synchronization and Offline Handling",
+    "description": "Verify that app data syncs reliably with Firebase Firestore in real-time and cached data is used correctly when offline.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Perform data updates (e.g., booking a class, checking in) on one device"
+      },
+      {
+        "type": "assertion",
+        "description": "Changes reflect in real-time on another logged-in device"
+      },
+      {
+        "type": "action",
+        "description": "Disable internet connectivity and open the app"
+      },
+      {
+        "type": "assertion",
+        "description": "Cached data loads successfully and app operates with limited functionality"
+      },
+      {
+        "type": "action",
+        "description": "Restore internet connectivity"
+      },
+      {
+        "type": "assertion",
+        "description": "Data syncs and updates automatically without errors"
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "Error Handling and Fallback UI for API Failures",
+    "description": "Check that the app presents graceful error messages and fallback UI in case of API failures or network errors.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Simulate OpenRouter API failure during AI Chat interaction"
+      },
+      {
+        "type": "assertion",
+        "description": "User sees a clear and informative error message with option to retry"
+      },
+      {
+        "type": "action",
+        "description": "Simulate Firebase Firestore network outage"
+      },
+      {
+        "type": "assertion",
+        "description": "App displays fallback UI indicating offline status and queued actions"
+      },
+      {
+        "type": "action",
+        "description": "Attempt to book a class during network outage"
+      },
+      {
+        "type": "assertion",
+        "description": "App queues the booking and processes it automatically once back online"
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "UI Accessibility Compliance",
+    "description": "Validate that UI components meet accessibility standards including minimum touch target sizes, appropriate contrast ratios, and font readability across platforms.",
+    "category": "ui",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Review UI elements on key screens: Home, Workouts, Gyms, Profile"
+      },
+      {
+        "type": "assertion",
+        "description": "All interactive elements meet recommended touch target size guidelines"
+      },
+      {
+        "type": "assertion",
+        "description": "Color contrast ratios meet WCAG AA standards"
+      },
+      {
+        "type": "assertion",
+        "description": "Fonts are legible and scalable according to user accessibility settings"
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "Authentication and Authorization Flows",
+    "description": "Verify that user authentication works properly including login, logout, session persistence, and secure profile access.",
+    "category": "security",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Launch app and attempt login with valid credentials"
+      },
+      {
+        "type": "assertion",
+        "description": "User is authenticated successfully and navigated to Home Screen"
+      },
+      {
+        "type": "action",
+        "description": "Close and reopen app"
+      },
+      {
+        "type": "assertion",
+        "description": "User session persists and remains logged in"
+      },
+      {
+        "type": "action",
+        "description": "Logout from profile screen"
+      },
+      {
+        "type": "assertion",
+        "description": "User is logged out and redirected to login screen"
+      },
+      {
+        "type": "action",
+        "description": "Attempt accessing Profile Screen without login"
+      },
+      {
+        "type": "assertion",
+        "description": "Access is denied and user is redirected to login screen"
+      }
+    ]
+  },
+  {
+    "id": "TC015",
+    "title": "Multi-device Responsive UI Behavior",
+    "description": "Ensure that the app UI renders responsively and maintains usability across different device types including various iOS, Android phones, tablets, and web browsers with different window sizes.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Access app on small-screen mobile device"
+      },
+      {
+        "type": "assertion",
+        "description": "UI layout adjusts gracefully with no clipping or overlapping elements"
+      },
+      {
+        "type": "action",
+        "description": "Access app on larger tablet device"
+      },
+      {
+        "type": "assertion",
+        "description": "UI utilizes additional screen space appropriately and navigation remains intuitive"
+      },
+      {
+        "type": "action",
+        "description": "Access app on desktop web browser and resize browser window"
+      },
+      {
+        "type": "assertion",
+        "description": "UI adapts responsively maintaining usability and correct element scaling"
+      }
+    ]
+  }
+]

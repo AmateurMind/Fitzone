@@ -1,0 +1,16 @@
+node_modules
+.expo
+.env
+.env.local
+.env.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+android/
+ios/
+.idea
+.vscode
+*.jks
+*.keystore
+google-services.json
+GoogleService-Info.plist

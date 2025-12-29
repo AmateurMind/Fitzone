@@ -1,0 +1,17 @@
+{
+  "status": "init",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:19006/",
+  "executionArgs": {
+    "projectName": "Task-FitZone",
+    "projectPath": "F:\\Task-FitZone",
+    "testIds": [],
+    "additionalInstruction": "Focus on verifying all the fixes we made: Gyms tab navigation, AI Chat access, difficulty filters (including Intermediate), Profile settings buttons, error handling, and QR scanner fallback. Test responsiveness and all navigation flows.",
+    "envs": {
+      "API_KEY": "sk-user-gLvNsi9v0zULMQFSmrNsElZ0gGxO22Pa8LC_LFmV-GYT3Ob2mEPxPlbsEw-ZtKVW0qtvCglj0h8KBAAdmQMaJzS80D5eqRWGy2k9qGTAOjL5541d9F5AR1eJZ-oQu3wj9_Q"
+    }
+  },
+  "proxy": "http://3f5a14a1-1d93-4aed-aa7a-6276ef2d87c1:NNYXoCw43WNUN8fh2DfubBx67zTUKkw1@tun.testsprite.com:8080",
+  "serverPort": 58811
+}
